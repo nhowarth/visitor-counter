@@ -1,0 +1,28 @@
+index.php - visitor counter
+index2.php - counts the total number of visitors and the number of visitors 
+    during four time intervals:  
+    midnight to 6am, 6am to noon, noon to 6pm, and 6pm to midnight
+
+get_count.py.cgi <filename> - prints the first line of a file 
+    (given by the first argument)
+add_count.py.cgi <filename> <count> - overwrite the file given by the first
+    argument with the second argument <count> + 1
+get_time.py.cgi - gets the current hour [0-23]
+                - returns:  0 if 0<=hour<6
+                            1 if 6<=hour<12
+                            2 if 12<=hour<18
+                            3 if 18<=hour<24
+get_time_count.py.cgi <timerange> - prints the first line of a file specified
+    by the given argument
+                 - if <timerange> = 0 read from "0-5.txt"
+                                  = 1 read from "6-11.txt"
+                                  = 2 read from "12-17.txt"
+                                  = 3 read from "18-23.txt"
+add_time_count.py.cgi <timerange> <timecount> - overwrites the specified by the
+    first argument with the second argument <timecount> + 1
+                 - if <timerange> = 0 write to "0-5.txt"
+                                  = 1 write to "6-11.txt"
+                                  = 2 write to "12-17.txt"
+                                  = 3 write to "18-23.txt"
+show_time_counts.py.cgi - prints "Number of visitors between ___ and ___:  "
+    followed by the number of visitors during each time range
